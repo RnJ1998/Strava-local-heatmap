@@ -1,0 +1,7 @@
+python strava_local_heatmap.py --orange --output heatmap_lappeenranta.png --bounds 60.95 61.15 27.90 28.45 --zoom 12 --sigma 2
+
+python strava_local_heatmap.py --orange --output heatmap_raisio.png --bounds 60.40 60.60 21.90 22.35 --zoom 12 --sigma 2
+
+python strava_local_heatmap.py --orange --output heatmap_lausanne.png --bounds 46.45 46.60 6.45 6.80 --zoom 12 --sigma 2
+
+python strava_local_heatmap.py --orange --output heatmap_raisio_sharp.png --bounds 60.40 60.60 21.90 22.35 --zoom 13 --sigma 1

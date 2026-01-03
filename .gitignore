@@ -1,4 +1,22 @@
-gpx/*.gpx
+# Do NOT commit your personal activity data or generated outputs
+# Activity exports (TCX / GPX) and working GPX folder
+gpx/
+# Explicit patterns (if you prefer to keep a placeholder file, add .gitkeep)
+#gpx/*.tcx
+#gpx/*.tcx.gz
+
+# Map tiles used during heatmap generation
 tiles/
-venv/
+
+# Generated outputs
 *.png
+*.csv
+
+# Keep README images tracked (this repo includes example images used by the README)
+!images/*
+
+# Python / Editor artifacts
+venv/
+__pycache__/
+*.pyc
+.DS_Store

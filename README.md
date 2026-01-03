@@ -11,9 +11,23 @@ Optimized for cycling activities :bicyclist:
 
 ## Usage
 
-* Download your GPX files to the `gpx` folder (https://support.strava.com/hc/en-us/articles/216918437-Exporting-your-Data-and-Bulk-Export)
-* Install the python dependencies from `requirements.txt`
-* Run `python strava_local_heatmap.py`
+* Export your activities from Strava (they are commonly provided as `.tcx.gz`) and place them in the `gpx` folder. (https://support.strava.com/hc/en-us/articles/216918437-Exporting-your-Data-and-Bulk-Export#h_01GG58HC4F1BGQ9PQZZVANN6WF)
+* If your export contains `.tcx.gz` files, use the included converter to generate GPX files with timestamps:
+
+```bash
+python convert_tcx.py         # converts both .tcx and .tcx.gz files found in `gpx/`
+```
+
+* Alternatively, you can manually uncompress your TCX files (Linux/macOS):
+
+```bash
+gunzip gpx/*.tcx.gz
+```
+
+* Install the Python dependencies from `requirements.txt`.
+* Run `python strava_local_heatmap.py` to generate a heatmap.
+
+> **Important:** Do **not** commit personal activity data (the `gpx/` folder or any `.tcx`/`.tcx.gz` files), downloaded map tiles (`tiles/`), or generated heatmap images (`*.png`) to your public repository — the `.gitignore` already excludes these files to avoid leaking private data.
 
 ### Command-line options
 

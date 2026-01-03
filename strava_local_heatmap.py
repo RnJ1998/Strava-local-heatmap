@@ -87,7 +87,8 @@ def main(args: Namespace) -> None:
                 if '<time' in line:
                     l = line.split('>')[1][:4]
 
-                    if not args.year or l in args.year:
+                    #if not args.year or l in args.year:
+                    if True:
                         gpx_files_count += 1
 
                         for line in file:
